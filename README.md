@@ -18,6 +18,7 @@ This repository should help to see, that there are so many small things we can d
 * install [php over brew](https://formulae.brew.sh/formula/php) on MacOS
     * *comment:* the big advantage is to have multiple versions linked by brew directly from the cellar 
 * install [git over brew](https://gist.github.com/derhuerst/1b15ff4652a867391f03) on MacOS
+* install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) bash on MacOS
 * install [composer](https://getcomposer.org/download/) globally for dependency management in PHP
 * install [xdebug](https://xdebug.org/docs/install) for debugging, tracing, profiling and the codecoverage
 
@@ -47,7 +48,8 @@ This repository should help to see, that there are so many small things we can d
     * select a plugin for framework support like [symfony](https://plugins.jetbrains.com/plugin/7219-symfony-support)
 
 ## Easy programming advice
-In the future I want to write a short abstract on the how and why I write To these advices down.
+In the future I want to write a short abstract on the how and why I write these advices down. 
+Maybe there will be some Sniff to check them.
 
 ### meta
 * Every advice has its own context and the context beats every advice.
@@ -59,7 +61,7 @@ In the future I want to write a short abstract on the how and why I write To the
 * You don't have to follow them all, but you should know that they exist. 
     * *comment*: You should not miss out any advice, if you dont know the reason.
 
-### advice
+### advices
 
 * What cannot be tested should not be programmed.
     * *comment:* There are many tools for automated testing, but start with [PHPUnit](https://phpunit.de/)
@@ -106,7 +108,23 @@ In the future I want to write a short abstract on the how and why I write To the
 * Refactoring ([book](https://www.amazon.de/Refactoring-Improving-Design-Existing-Technology/dp/0201485672))
 * Principles of package design ([book](https://www.amazon.de/Principles-Package-Design-Creating-Components/dp/1484241185))
 
-## Code Reviews
+## Blogs
+* https://matthiasnoback.nl/
+* https://ocramius.github.io/
+* https://stitcher.io/ 
+* https://blog.jetbrains.com/phpstorm/
+
+## Important composer packages
+The list of packages is not complete, but you can start from this stack.
+* Testing framework [PHPUnit](https://github.com/sebastianbergmann/phpunit)
+* Static code analyses with [PHPStan](https://github.com/phpstan/phpstan) or [Psalm](https://github.com/vimeo/psalm)
+* PHP Codesniffer [PHPCS and PHPCBF](https://github.com/squizlabs/PHP_CodeSniffer)
+* Simple composer PHAR file handling with [tooly](https://github.com/tommy-muehle/tooly-composer-script) 
+* Simple [Enum](https://github.com/freshp/php-enumeration) abstraction inspired by MySQL 
+* PHP library to generate [UUIDs](https://github.com/ramsey/uuid) 
+* Composer package to handle [Security advisories](https://github.com/Roave/SecurityAdvisoriesBuilder) 
+
+## Code reviews
 * "You are not your Code!"
     * code reviewer do not comment you, they comment your code
 * If you find code you do not understand, remark it.
