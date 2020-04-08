@@ -14,6 +14,18 @@ And a new developer starts from scratch, because he or she do not understands th
 Everybody can produce legacy code. (legacy code is code that works) So IMO the best code is code that everybody can understand by reading it. 
 This repository should help to see, that there are so many small things we can improve from now on.     
 
+1. [Tools](#tools)
+    1. [Build your own webservices](#build-your-own-webservices)
+    1. [Free online tools](#free-online-tools)
+1. [IDE](#ide)
+1. [PHP programming theses](#php-programming-theses)
+    1. [meta](#meta)
+    1. [thesis](#thesis)
+1. [Learning the basics](#learning-the-basics)
+1. [Blogs](#blogs)
+1. [Important composer packages](#important-composer-packages)
+1. [Code reviews](#code-reviews)
+
 ## Tools
 * use package managers for your local requirements
     * for example in MacOS install [brew](https://brew.sh/index_de)
@@ -64,37 +76,37 @@ Every thesis can be an advise.
 * You don't have to follow them all, but you should know that they exist. 
     * *comment*: You should not miss out any advice, if you dont know the reason. *rework
 
-### theses
+### thesis
 > What cannot be tested should not be programmed.
-* *comment:* There are many tools for automated testing, but start with [PHPUnit](https://phpunit.de/)
+* *comment:* There are many tools for automated testing, but start with [PHPUnit](https://phpunit.de/).
 > Use type declarations for all properties, functions and variables in your code.
-* *comment:* They didn't come in for nothing
+* *comment:* They didn't come in for nothing.
 > Immutability is king.
-* *comment:* know the [advantages](https://hackernoon.com/5-benefits-of-immutable-objects-worth-considering-for-your-next-project-f98e7e85b6ac)  
+* *comment:* Know the [advantages](https://hackernoon.com/5-benefits-of-immutable-objects-worth-considering-for-your-next-project-f98e7e85b6ac).  
 > Always check clauses (e.g. in IFs) with the most accurate possible value.
-* *comment:* Return types can change, but the clause should not. (core methods can also change.)
+* *comment:* Return types can change, but the clause should not. (core methods can also be changed.)
 > Avoid else and try early returns.
-* *comment:* read some [why´s](https://szymonkrajewski.pl/why-should-you-return-early/)
+* *comment:* Read some [why's](https://szymonkrajewski.pl/why-should-you-return-early/).
 > Do not use arrays across class (or function) boundaries.
 * *comment:* They are not typed.
 > String concatenation always with `sprintf`.
 * *comment:* It is easier to extend and it prevents magic.
 > Use yoda comparison.
-* *comment:* [explanation](https://knowthecode.io/yoda-conditions-yoda-not-yoda). 
+* *comment:* [Explanation](https://knowthecode.io/yoda-conditions-yoda-not-yoda). 
 You can look at the same position for every clause and you prevent to assign a variable. 
-> Use `declare(strict_types=1);` in your
-* *comment:* [explanation](https://www.brainbell.com/php/strict-type.html)  
+> Use `declare(strict_types=1);` at the top of every PHP script
+* *comment:* [Explanation](https://www.brainbell.com/php/strict-type.html)  
 > Use `final` for your objects.
 * *comment:* Our brain is not designed to understand inheritance (like exponential function).
 > The default visibility `private` applies to properties and functions.
 * *comment:* You have to take care about every public function.
 > As long as annotations are not a language construct in PHP use them sparingly and only for inevitable process control
 > or external packages where the maintainers know what they are doing.
-* *comment:* Writing your own annotations is for pro´s.   
+* *comment:* Writing your own annotations is for pro's.
 > Do not use full namespaces in the code, `use` even if only `\` has to be specified
 * *comment:* You can see how many external dependencies your class have. 
 > Traits should never use traits. I think you should prevent traits at all. 
-* *comment:* It is nearly impossible to get out of this inheritance tree.
+* *comment:* It is nearly impossible to get out of this inheritance tree. And think at exponential functions.
 > Do not check in commented or unused code.
 * *comment:* You have a version control system, use it.
 > No abbreviations in the code.
@@ -103,7 +115,7 @@ You can look at the same position for every clause and you prevent to assign a v
 ## Learning the basics
 * Principles of object oriented design ([web](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod))
 * The Clean Coder ([book](https://www.amazon.de/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073) | [web](https://clean-code-developer.de/))
-* Extremly Defensiv Programming ([video](https://www.youtube.com/watch?v=8d2AtAGJPno) | [slides](https://ocramius.github.io/extremely-defensive-php/))
+* Extremely defensive PHP ([video](https://www.youtube.com/watch?v=8d2AtAGJPno) | [slides](https://ocramius.github.io/extremely-defensive-php/))
 * Design Pattern ([web](https://designpatternsphp.readthedocs.io/en/latest/README.html))
 * PHP Standards Recommendations [PSR](https://www.php-fig.org/psr/)
 * Semantic Versioning ([web](https://semver.org/))
