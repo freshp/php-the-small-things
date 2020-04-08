@@ -1,9 +1,18 @@
 # php the small things
 A summary of small things a php programmer can do to improve the code and the readability of code.
 
-## quickwins
+There are so brilliant programming concepts and paradigms in the PHP community. I don't want to chew them again and again. 
+But I think everybody needs some easy small things we can improve in our everydays work. 
+There are so many books, conferences, videos and so on, where you can learn great new or old architectures. 
+But most of the time you have to start from scratch or read thick books before you can start. 
+That is fine, but IMO there are so many small things you can improve and start now. 
+I saw many developer doing great work in general, but no one understands the goal of their software or the way to the goal. 
+There will be the day they dont support their fancy tools any more. 
+And a new developer starts from scratch, because he or she do not understands the code at all. 
+Everybody can produce legacy code. (legacy code is code that works) So IMO the best code is code that everybody can understand by reading it. 
+This repository should help to see, that there are so many small things we can do better.     
 
-### Tools
+## Tools
 * use package managers for your local requirements
     * for example in MacOS install [brew](https://brew.sh/index_de)
 * install [php over brew](https://formulae.brew.sh/formula/php) on MacOS
@@ -11,8 +20,18 @@ A summary of small things a php programmer can do to improve the code and the re
 * install [git over brew](https://gist.github.com/derhuerst/1b15ff4652a867391f03) on MacOS
 * install [composer](https://getcomposer.org/download/) globally for dependency management in PHP
 * install [xdebug](https://xdebug.org/docs/install) for debugging, tracing, profiling and the codecoverage
-    
-### IDE
+
+### Build your own webservices
+* use a automation server like [jenkins](https://jenkins.io/) for continuous integration, continuous deployment or any other automation
+* use a remote repository server like [gitlab](https://about.gitlab.com/) or [bitbucket](https://bitbucket.org/) or at least github 
+* use a private package repository like [satis](https://github.com/composer/satis)
+
+### Free online tools
+* if you need regex, than use [this page](https://regex101.com/)
+* you want to schedule a cronjob, than look at [this page](https://crontab.guru/)
+* you are no sure with your version constraint, than look at [this page](https://jubianchi.github.io/semver-check/#/)  
+
+## IDE
 * use an IDE for example [PHPStorm](https://www.jetbrains.com/phpstorm/) 
 * set PHPStorm up ([jetbrains documentation](https://www.jetbrains.com/help/phpstorm/configuring-php-development-environment.html)) correctly 
     * use [inspections](https://www.jetbrains.com/help/phpstorm/code-inspection.html) 
@@ -27,17 +46,21 @@ A summary of small things a php programmer can do to improve the code and the re
     * [bash support](https://plugins.jetbrains.com/plugin/4230-bashsupport)
     * select a plugin for framework support like [symfony](https://plugins.jetbrains.com/plugin/7219-symfony-support)
 
-### Easy programming guidelines
-* Every rule has its own context and the context beats every rule.
-* Please use common sense for every rule.
-* Every rule which does not bring any benefit should be skipped.
-* Never create rules from subjective perspectives.
-* A rule should ever have a real benefit.
-* A rule should apply generally.
-* You don't have to follow them all, but you should know that they exist. 
-    * *comment*: You can not fold a rule, if you dont know the reason.
+## Easy programming advice
+In the future I want to write a short abstract on the how and why I write To these advices down.
 
-#### rules
+### meta
+* Every advice has its own context and the context beats every advice.
+* Please use common sense for every advice, because they are no rules.
+* Every advice which does not bring any benefit should be skipped.
+* Never create advices from subjective perspectives.
+* A advice should ever have a real benefit.
+* A advice should apply generally.
+* You don't have to follow them all, but you should know that they exist. 
+    * *comment*: You should not miss out any advice, if you dont know the reason.
+
+### advice
+
 * What cannot be tested should not be programmed.
     * *comment:* There are many tools for automated testing, but start with [PHPUnit](https://phpunit.de/)
 * Use type declarations for all properties, functions and variables in your code.
@@ -73,8 +96,7 @@ A summary of small things a php programmer can do to improve the code and the re
 * No abbreviations in the code.
     * *comment:* You use an IDE, use it.
 
-
-### Basics
+## Learning the basics
 * Principles of object oriented design ([web](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod))
 * The Clean Coder ([book](https://www.amazon.de/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073) | [web](https://clean-code-developer.de/))
 * Extremly Defensiv Programming ([video](https://www.youtube.com/watch?v=8d2AtAGJPno) | [slides](https://ocramius.github.io/extremely-defensive-php/))
@@ -84,7 +106,7 @@ A summary of small things a php programmer can do to improve the code and the re
 * Refactoring ([book](https://www.amazon.de/Refactoring-Improving-Design-Existing-Technology/dp/0201485672))
 * Principles of package design ([book](https://www.amazon.de/Principles-Package-Design-Creating-Components/dp/1484241185))
 
-### Code Reviews
+## Code Reviews
 * "You are not your Code!"
     * code reviewer do not comment you, they comment your code
 * If you find code you do not understand, remark it.
