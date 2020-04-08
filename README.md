@@ -18,13 +18,14 @@ This repository should help to see, that there are so many small things we can i
     1. [Build your own webservices](#build-your-own-webservices)
     1. [Free online tools](#free-online-tools)
 1. [IDE](#ide)
-1. [PHP programming theses](#php-programming-theses)
-    1. [meta](#meta)
-    1. [thesis](#thesis)
+1. [PHP programming](#php-programming)
+    1. [Meta theses](#meta-theses)
+    1. [PHP programming theses](#php-programming-theses)
 1. [Learning the basics](#learning-the-basics)
 1. [Blogs](#blogs)
 1. [Important composer packages](#important-composer-packages)
 1. [Code reviews](#code-reviews)
+    1. [Code review thesis](#code-review-theses)
 
 ## Tools
 * use package managers for your local requirements
@@ -61,11 +62,11 @@ This repository should help to see, that there are so many small things we can i
     * [bash support](https://plugins.jetbrains.com/plugin/4230-bashsupport)
     * select a plugin for framework support like [symfony](https://plugins.jetbrains.com/plugin/7219-symfony-support)
 
-## PHP programming theses
+## PHP programming
 In the future I want to write a short abstract on the how and why I write these theses down. 
 Maybe there will be some Sniffs to check them.
 
-### meta
+### Meta theses
 Every thesis can be an advise.
 * Every advice has its own context and the context beats every advice.
 * Please use common sense for every advice, because they are no rules.
@@ -76,7 +77,7 @@ Every thesis can be an advise.
 * You don't have to follow them all, but you should know that they exist. 
     * *comment*: You should not miss out any advice, if you dont know the reason. *rework
 
-### thesis
+### PHP programming theses
 > What cannot be tested should not be programmed.
 * *comment:* There are many tools for automated testing, but start with [PHPUnit](https://phpunit.de/).
 > Use type declarations for all properties, functions and variables in your code.
@@ -139,6 +140,9 @@ The list of packages is not complete, but you can start from this stack.
 * Simple [Enum](https://github.com/freshp/php-enumeration) abstraction inspired by MySQL 
 
 ## Code reviews
+Start making code reviews. If you dont know how? Read this [article](https://medium.com/palantir/code-review-best-practices-19e02780015f)
+
+### Code review theses
 > You are not your Code!
 * code reviewer do not comment you, they comment your code
 > If you find code you do not understand, ask.
