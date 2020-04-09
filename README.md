@@ -119,10 +119,18 @@ Defects in these products result in direct financial loss or a blocker of work f
     * *comment:* You can see how many external dependencies your class have. 
 1. > Traits should never use traits. I think you should prevent traits at all. 
     * *comment:* It is nearly impossible to get out of this inheritance tree. And think at exponential functions.
+1. > Strings should be consts.
+    * Try to prevent strings from your code besides output and use constants instead. 
+    They are reusable and you reduce copy-paste-errors. 
 1. > Do not check in commented or unused code.
     * *comment:* You have a version control system, use it.
 1. > No abbreviations in the code.
     * *comment:* You use an IDE, use it.
+1. > Use dev-dependency-tools as phar files.
+    * *comment:* Your requirement-tree will be thankful, there are less conflicts and its faster.
+1. > Do not use a synchronous programming language like a asynchronous. 
+    * *comment:* I know there are good approaches, but both types are different ways of thinking. 
+    Maybe it is my fault, but IMO you can make one way very good, or two a little bit. 
 
 ## Learning the basics
 * Principles of object oriented design ([web](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod))
