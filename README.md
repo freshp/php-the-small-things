@@ -12,7 +12,9 @@ I saw many developer doing great work in general, but no one understands the goa
 There will be the day they dont support their fancy tools any more. 
 And a new developer starts from scratch, because he or she do not understands the code at all. 
 Everybody can produce legacy code. (legacy code is code that works) So IMO the best code is code that everybody can understand by reading it. 
-This repository should help to see, that there are so many small things we can improve from now on.     
+This repository should help to see, that there are so many small things we can improve from now on.  
+
+I am convinced that in a complex situation the small things makes the difference.   
 
 1. [Tools](#tools)
     1. [Build your own webservices](#build-your-own-webservices)
