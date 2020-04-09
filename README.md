@@ -137,15 +137,18 @@ Defects in these products result in direct financial loss or a blocker of work f
 * Pro git ([ebook](https://git-scm.com/book/de/v2))
 
 ## Blogs
+There are many more interesting blogs, but these selection cross up my way multiple times.
+
+* https://blog.jetbrains.com/phpstorm/
+* https://blog.cleancoder.com/
 * https://matthiasnoback.nl/
 * https://ocramius.github.io/
-* https://stitcher.io/ 
-* https://blog.jetbrains.com/phpstorm/
 
 ## Important composer packages
 The list of packages is not complete, but you can start projects from this stack.
 
 * Composer package to handle [Security advisories](https://github.com/Roave/SecurityAdvisoriesBuilder). 
+* Do not commit secrets and use [.env's](https://github.com/vlucas/phpdotenv) instead.
 * The testing framework [PHPUnit](https://github.com/sebastianbergmann/phpunit).
 * Static code analyses with [PHPStan](https://github.com/phpstan/phpstan) or [Psalm](https://github.com/vimeo/psalm).
 * PHP Codesniffer with [PHPCS and PHPCBF](https://github.com/squizlabs/PHP_CodeSniffer).
