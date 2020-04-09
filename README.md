@@ -58,7 +58,7 @@ I am convinced that in a complex situation the small things makes the difference
     * use [inspections](https://www.jetbrains.com/help/phpstorm/code-inspection.html) 
     * use one of the default codestyles in PHPStorm for example [PSR-12](https://www.php-fig.org/psr/psr-12/)
     * use [xdebug](https://xdebug.org/) in PHPStorm ([documentation](https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html))
-    * take a look at PHPStorm features like database, deployment, version control, ...
+    * take a look at PHPStorm features like testing, database, deployment, version control, ...
 * use plugins of PHPStorm:
     * PHP Inspections - EA [Extended](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-) und [Ultimate](https://plugins.jetbrains.com/plugin/10215-php-inspections-ea-ultimate-)
     * [composer](https://plugins.jetbrains.com/plugin/index?xmlId=org.psliwa.idea.composer)
@@ -161,6 +161,7 @@ The list of packages is not complete, but you can start projects from this stack
 * The testing framework [PHPUnit](https://github.com/sebastianbergmann/phpunit).
 * Static code analyses with [PHPStan](https://github.com/phpstan/phpstan) or [Psalm](https://github.com/vimeo/psalm).
 * PHP Codesniffer with [PHPCS and PHPCBF](https://github.com/squizlabs/PHP_CodeSniffer).
+* Dependency injection of [symfony](https://symfony.com/doc/current/components/dependency_injection.html)
 * PHP library to generate [UUIDs](https://github.com/ramsey/uuid).
 * Simple composer PHAR file handling with [tooly](https://github.com/tommy-muehle/tooly-composer-script). 
 * Simple [Enum](https://github.com/freshp/php-enumeration) abstraction inspired by MySQL.
