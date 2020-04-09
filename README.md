@@ -44,6 +44,7 @@ I am convinced that in a complex situation the small things makes the difference
 * use a automation server like [jenkins](https://jenkins.io/) for continuous integration, continuous deployment or any other automation
 * use a remote repository server like [gitlab](https://about.gitlab.com/) or [bitbucket](https://bitbucket.org/) or at least github 
 * use a private package repository like [satis](https://github.com/composer/satis)
+* use a error tracker like [sentry](https://sentry.io)
 
 ### Free online tools
 * if you need regex, than use [this page](https://regex101.com/)
