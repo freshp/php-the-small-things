@@ -29,6 +29,7 @@ I am convinced that in a complex situation the small things makes the difference
     1. [Global composer packages](#global-composer-packages)
 1. [Code reviews](#code-reviews)
     1. [Code review thesis](#code-review-theses)
+1. [Documentation](#documentation)
 
 ## Tools
 * use package managers for your local requirements
@@ -176,3 +177,6 @@ Start making code reviews. If you dont know how? Read this [article](https://med
 > You are not your Code!
 * code reviewer do not comment you, they comment your code
 > If you find code you do not understand, ask.
+
+## Documentation
+I only saw one approach, which seems to be suitable for software projects and this is [arc42](https://arc42.org/)
