@@ -81,7 +81,10 @@ Every thesis can be an advise.
 ### PHP programming theses
 These are some theses I developed in more than 10 years of programming in teams.
 It is just a numbered list to get in discussion about it.
-But I tried to sort them from important (top) to not sooo important (bottom).  
+But I tried to sort them from important (top) to not sooo important (bottom).
+
+My context has always been to develop products that have to be adapted and extended over a long period of time.
+Defects in these products result in direct financial loss or a blocker of work for teams. 
 
 1. > What cannot be tested should not be programmed.
     * *comment:* There are many tools for automated testing, but start with [PHPUnit](https://phpunit.de/).
