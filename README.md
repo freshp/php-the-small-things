@@ -181,3 +181,5 @@ Start making code reviews. If you dont know how? Read this [article](https://med
 
 ## Documentation
 I only saw one approach, which seems to be suitable for software projects and this is [arc42](https://arc42.org/)
+
+For further diagrams or graphs you can use [draw.io](https://app.diagrams.net/)
