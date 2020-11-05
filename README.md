@@ -1,7 +1,7 @@
 # php the small things
 A summary of small things a php programmer can do to improve the code and the readability of code.
 
-*estimated reading time (without links): 10 minutes*
+*estimated reading time (without links): 15 minutes*
 
 There are so brilliant programming concepts and paradigms in the PHP community. I don't want to chew them again and again. 
 But I think everybody needs some easy small things we can improve in our everyday's work. 
@@ -68,8 +68,6 @@ I am convinced that in a complex situation the small things makes the difference
     * select a plugin for framework support like [symfony](https://plugins.jetbrains.com/plugin/7219-symfony-support)
 
 ## PHP programming
-In the future I want to write a short abstract on the how and why I write these theses down. 
-Maybe there will be some Sniffs to check them.
 
 ### Meta theses
 Every thesis can be an advise.
@@ -80,19 +78,19 @@ Every thesis can be an advise.
 * A advice should ever have a real benefit.
 * A advice should apply generally.
 * You don't have to follow them all, but you should know that they exist. 
-    * *comment*: You should not miss out any advice, if you dont know the reason. *rework
+    * *comment*: You should not miss out any advice, if you dont know the reason.
 
 ### PHP programming theses
 These are some theses I developed in more than 10 years of programming in teams.
 It is just a numbered list to get in discussion about it.
-But I tried to sort them from important (top) to not sooo important (bottom).
+New thesis will be placed at the end of the list.
 
 My context has always been to develop products that have to be adapted and extended over a long period of time.
 Defects in these products result in direct financial loss or a blocker of work for teams. 
 
 1. > What cannot be tested should not be programmed.
     * *comment:* There are many tools for automated testing, but start with [PHPUnit](https://phpunit.de/).
-1. > Use type declarations for all properties, functions and variables in your code.
+1. > Use type declarations for all properties, functions (return types and parameters) and variables in your code.
     * *comment:* They didn't come in for nothing.
 1. > Immutability is king.
     * *comment:* Know the [advantages](https://hackernoon.com/5-benefits-of-immutable-objects-worth-considering-for-your-next-project-f98e7e85b6ac).  
@@ -115,7 +113,7 @@ Defects in these products result in direct financial loss or a blocker of work f
     * *comment:* You have to take care about every public function.
 1. > As long as annotations are not a language construct in PHP use them sparingly and only for inevitable process control
    > or external packages where the maintainers know what they are doing.
-    * *comment:* Writing your own annotations is for pro's.
+    * *comment:* Writing your own annotations is for pro's or use PHP8 attributes.
 1. > Do not use full namespaces in the code, `use` even if only `\` has to be specified
     * *comment:* You can see how many external dependencies your class have. 
 1. > Traits should never use traits. I think you should prevent traits at all. 
@@ -159,6 +157,7 @@ The list of packages is not complete, but you can start projects from this stack
 * Composer package to handle [Security advisories](https://github.com/Roave/SecurityAdvisoriesBuilder). 
 * Do not commit secrets and use [.env's](https://github.com/vlucas/phpdotenv) instead.
 * The testing framework [PHPUnit](https://github.com/sebastianbergmann/phpunit).
+   * If you reached nearly 100% of code coverage than you can go further with [infection](https://github.com/infection/infection).
 * Static code analyses with [PHPStan](https://github.com/phpstan/phpstan) or [Psalm](https://github.com/vimeo/psalm).
 * PHP Codesniffer with [PHPCS and PHPCBF](https://github.com/squizlabs/PHP_CodeSniffer).
 * Dependency injection of [symfony](https://symfony.com/doc/current/components/dependency_injection.html)
@@ -169,7 +168,8 @@ The list of packages is not complete, but you can start projects from this stack
 ### Global composer packages
 There are some packages you can install and use as global dependency.
 
-* Run composer installs parallel with [prestissimo](https://github.com/hirak/prestissimo).
+* Run Composer1 installs parallel with [prestissimo](https://github.com/hirak/prestissimo).
+   * Composer2 is very fast on its own. Uninstall this plugin and update the Composer itself.
 
 ## Code reviews
 Start making code reviews. If you dont know how? Read this [article](https://medium.com/palantir/code-review-best-practices-19e02780015f)
@@ -178,8 +178,9 @@ Start making code reviews. If you dont know how? Read this [article](https://med
 > You are not your Code!
 * code reviewer do not comment you, they comment your code
 > If you find code you do not understand, ask.
+* It is not the question if you should know, but when.
 
 ## Documentation
-I only saw one approach, which seems to be suitable for software projects and this is [arc42](https://arc42.org/)
+I only saw one approach, which seems to be suitable for software projects and this is [arc42](https://arc42.org/).
 
-For further diagrams or graphs you can use [draw.io](https://app.diagrams.net/)
+For further diagrams or graphs you can use [draw.io](https://app.diagrams.net/).
