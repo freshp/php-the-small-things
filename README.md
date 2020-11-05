@@ -16,56 +16,20 @@ This repository should help to see, that there are so many small things we can i
 
 I am convinced that in a complex situation the small things makes the difference.   
 
-1. [Tools](#tools)
-    1. [Build your own webservices](#build-your-own-webservices)
-    1. [Free online tools](#free-online-tools)
-1. [IDE](#ide)
 1. [PHP programming](#php-programming)
     1. [Meta theses](#meta-theses)
     1. [PHP programming theses](#php-programming-theses)
 1. [Learning the basics](#learning-the-basics)
 1. [Blogs](#blogs)
+1. [Tools](#tools)
+    1. [Use web services for default tasks](#use-web-services-for-default-tasks)
+    1. [Free online tools](#free-online-tools)
+1. [IDE](#ide)
 1. [Important composer packages](#important-composer-packages)
     1. [Global composer packages](#global-composer-packages)
 1. [Code reviews](#code-reviews)
     1. [Code review thesis](#code-review-theses)
 1. [Documentation](#documentation)
-
-## Tools
-* use package managers for your local requirements
-    * for example in MacOS install [brew](https://brew.sh/index_de)
-* install [php over brew](https://formulae.brew.sh/formula/php) on MacOS
-    * *comment:* the big advantage is to have multiple versions linked by brew directly from the cellar 
-* install [git over brew](https://gist.github.com/derhuerst/1b15ff4652a867391f03) on MacOS
-* install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) bash on MacOS
-* install [composer](https://getcomposer.org/download/) globally for dependency management in PHP
-* install [xdebug](https://xdebug.org/docs/install) for debugging, tracing, profiling and the codecoverage
-
-### Build your own webservices
-* use a automation server like [jenkins](https://jenkins.io/) for continuous integration, continuous deployment or any other automation
-* use a remote repository server like [gitlab](https://about.gitlab.com/) or [bitbucket](https://bitbucket.org/) or at least github 
-* use a private package repository like [satis](https://github.com/composer/satis)
-* use a error tracker like [sentry](https://sentry.io)
-
-### Free online tools
-* if you need regex, than use [this page](https://regex101.com/)
-* you want to schedule a cronjob, than look at [this page](https://crontab.guru/)
-* you are not sure with your version constraint, than look at [this page](https://jubianchi.github.io/semver-check/#/)  
-
-## IDE
-* use an IDE for example [PHPStorm](https://www.jetbrains.com/phpstorm/) 
-* set PHPStorm up ([jetbrains documentation](https://www.jetbrains.com/help/phpstorm/configuring-php-development-environment.html)) correctly 
-    * use [inspections](https://www.jetbrains.com/help/phpstorm/code-inspection.html) 
-    * use one of the default codestyles in PHPStorm for example [PSR-12](https://www.php-fig.org/psr/psr-12/)
-    * use [xdebug](https://xdebug.org/) in PHPStorm ([documentation](https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html))
-    * take a look at PHPStorm features like testing, database, deployment, version control, ...
-* use plugins of PHPStorm:
-    * PHP Inspections - EA [Extended](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-) und [Ultimate](https://plugins.jetbrains.com/plugin/10215-php-inspections-ea-ultimate-)
-    * [composer](https://plugins.jetbrains.com/plugin/index?xmlId=org.psliwa.idea.composer)
-    * [.env](https://plugins.jetbrains.com/plugin/9525--env-files-support)
-    * [php annotations](https://plugins.jetbrains.com/plugin/7320-php-annotations)
-    * [bash support](https://plugins.jetbrains.com/plugin/4230-bashsupport)
-    * select a plugin for framework support like [symfony](https://plugins.jetbrains.com/plugin/7219-symfony-support)
 
 ## PHP programming
 
@@ -132,6 +96,8 @@ Defects in these products result in direct financial loss or a blocker of work f
     Maybe it is my fault, but IMO you can make one way very good, or two a little bit. 
 
 ## Learning the basics
+This is just a small snapshot I can recommend.
+
 * Principles of object oriented design ([web](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod))
 * The clean coder ([book](https://www.amazon.de/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073) | [web](https://clean-code-developer.de/))
 * Extremely defensive PHP ([video](https://www.youtube.com/watch?v=8d2AtAGJPno) | [slides](https://ocramius.github.io/extremely-defensive-php/))
@@ -150,6 +116,42 @@ There are many more interesting blogs, but these selection cross up my way multi
 * https://blog.cleancoder.com/
 * https://matthiasnoback.nl/
 * https://ocramius.github.io/
+
+## Tools
+* use package managers for your local requirements
+    * for example in MacOS install [brew](https://brew.sh/index_de)
+* install [php over brew](https://formulae.brew.sh/formula/php) on MacOS
+    * *comment:* the big advantage is to have multiple versions linked by brew directly from the cellar 
+* install [git over brew](https://gist.github.com/derhuerst/1b15ff4652a867391f03) on MacOS
+* install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) bash on MacOS
+* install [composer](https://getcomposer.org/download/) globally for dependency management in PHP
+* install [xdebug](https://xdebug.org/docs/install) for debugging, tracing, profiling and the codecoverage
+
+### Use web services for default tasks
+* use a automation server like [jenkins](https://jenkins.io/) for continuous integration, continuous deployment or any other automation
+* use a remote repository server like [gitlab](https://about.gitlab.com/) or [bitbucket](https://bitbucket.org/) or at least github 
+* use a private package repository like [satis](https://github.com/composer/satis)
+* use a error tracker like [sentry](https://sentry.io)
+
+### Free online tools
+* if you need regex, than use [this page](https://regex101.com/)
+* you want to schedule a cronjob, than look at [this page](https://crontab.guru/)
+* you are not sure with your version constraint, than look at [this page](https://jubianchi.github.io/semver-check/#/)  
+
+## IDE
+* use an IDE for example [PHPStorm](https://www.jetbrains.com/phpstorm/) 
+* set PHPStorm up ([jetbrains documentation](https://www.jetbrains.com/help/phpstorm/configuring-php-development-environment.html)) correctly 
+    * use [inspections](https://www.jetbrains.com/help/phpstorm/code-inspection.html) 
+    * use one of the default codestyles in PHPStorm for example [PSR-12](https://www.php-fig.org/psr/psr-12/)
+    * use [xdebug](https://xdebug.org/) in PHPStorm ([documentation](https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html))
+    * take a look at PHPStorm features like testing, database, deployment, version control, ...
+* use plugins of PHPStorm:
+    * PHP Inspections - EA [Extended](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-) und [Ultimate](https://plugins.jetbrains.com/plugin/10215-php-inspections-ea-ultimate-)
+    * [composer](https://plugins.jetbrains.com/plugin/index?xmlId=org.psliwa.idea.composer)
+    * [.env](https://plugins.jetbrains.com/plugin/9525--env-files-support)
+    * [php annotations](https://plugins.jetbrains.com/plugin/7320-php-annotations)
+    * [bash support](https://plugins.jetbrains.com/plugin/4230-bashsupport)
+    * select a plugin for framework support like [symfony](https://plugins.jetbrains.com/plugin/7219-symfony-support)
 
 ## Important composer packages
 The list of packages is not complete, but you can start projects from this stack.
