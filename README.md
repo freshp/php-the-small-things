@@ -75,7 +75,7 @@ Defects in these products result in direct financial loss or a blocker of work f
 1. > Use `final` for your objects.
     * *comment:* Our brain is not designed to understand inheritance (like exponential function).
 1. > The default visibility `private` applies to properties and functions.
-    * *comment:* You have to take care about every public function.
+    * *comment:* You have to take care about every public function or property like a public api.
 1. > As long as annotations are not a language construct in PHP use them sparingly and only for inevitable process control
    > or external packages where the maintainers know what they are doing.
     * *comment:* Writing your own annotations is for pro's or use PHP8 attributes.
