@@ -151,6 +151,7 @@ There are many more interesting blogs, but these selection cross up my way multi
     * [composer](https://plugins.jetbrains.com/plugin/index?xmlId=org.psliwa.idea.composer)
     * [.env](https://plugins.jetbrains.com/plugin/9525--env-files-support)
     * [php annotations](https://plugins.jetbrains.com/plugin/7320-php-annotations)
+    * [auto format while save](https://plugins.jetbrains.com/plugin/7642-save-actions)
     * [bash support](https://plugins.jetbrains.com/plugin/4230-bashsupport)
     * select a plugin for framework support like [symfony](https://plugins.jetbrains.com/plugin/7219-symfony-support)
 
