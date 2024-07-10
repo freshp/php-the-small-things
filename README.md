@@ -82,13 +82,13 @@ Defects in these products lead to direct financial losses or a work blocker for 
 5. **Avoid else statements and use early returns.**
     - *Comment:* [Reasons](https://szymonkrajewski.pl/why-should-you-return-early/).
     - **Example:**
-      ```php
-      function example($value) {
-          if (false === $value) {
-              return;
-          }
-          // Rest of the code
-      }
+      ```php      
+        function example(bool $value): void {
+            if (false === $value) {
+                return;
+            }
+            // Rest of the code
+        }
       ```
 
 6. **Do not use arrays across class or function boundaries.**
