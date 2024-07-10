@@ -80,7 +80,7 @@ Defects in these products lead to direct financial losses or a work blocker for 
     - **Example:** `if (true === $user->isActive())` is preferred over `if ($user->isActive())`.
 
 5. **Avoid else statements and use early returns.**
-    - *Comment:* [Reasons](https://szymonkrajewski.pl/why-early-return).
+    - *Comment:* [Reasons](https://szymonkrajewski.pl/why-should-you-return-early/).
     - **Example:**
       ```php
       function example($value) {
