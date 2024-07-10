@@ -26,7 +26,6 @@ I am convinced that in a complex situation the small things makes the difference
     1. [Free online tools](#free-online-tools)
 1. [IDE](#ide)
 1. [Important composer packages](#important-composer-packages)
-    1. [Global composer packages](#global-composer-packages)
 1. [Code reviews](#code-reviews)
     1. [Code review thesis](#code-review-theses)
 1. [Documentation](#documentation)
@@ -34,70 +33,221 @@ I am convinced that in a complex situation the small things makes the difference
 ## PHP programming
 
 ### Meta theses
-Every thesis can be an advise.
-* Every advice has its own context and the context beats every advice.
-* Please use common sense for every advice, because they are no rules.
-* Every advice which does not bring any benefit should be skipped.
-* Never create advices from subjective perspectives.
-* A advice should ever have a real benefit.
-* A advice should apply generally.
-* You don't have to follow them all, but you should know that they exist. 
-    * *comment*: You should not miss out any advice, if you dont know the reason.
+Every thesis can be advice.
+* Every advice has its own context, and context beats any advice.
+* Use common sense for every advice; these are not rules.
+* Skip any advice that doesn't bring a benefit.
+* Avoid subjective perspectives in advice.
+* Advice should have a real, tangible benefit.
+* Advice should generally apply broadly.
+* You don't have to follow all advice, but you should know they exist.
+  * Comment: Don't miss any advice without understanding the reason.
 
 ### PHP programming theses
-These are some theses I developed in more than 10 years of programming in teams.
-It is just a numbered list to get in discussion about it.
-New thesis will be placed at the end of the list. Feel free to add some of them.
-The given list is farley no complete, but these points I was talking about too often and it maybe help other too.  
+These are some theses I have developed in almost 20 years of programming in teams.
+It is just a numbered list to discuss it.
+New theses will be listed at the end of the list, feel free to add some.
+The given list is far from complete, but I have raised these points too many times and they may help others too.
+My context has always been the development of products that need to be adapted and expanded over a longer period of time. 
+It was never a question of whether a line of code would be adapted, but when.
+Defects in these products lead to direct financial losses or a work blocker for teams.
 
-My context has always been to develop products that have to be adapted and extended over a long period of time.
-Defects in these products result in direct financial loss or a blocker of work for teams.
 
-1. > What cannot be tested should not be programmed.
-    * *comment:* There are many tools for automated testing, but start with [PHPUnit](https://phpunit.de/).
-1. > Use type declarations for all properties, functions (return types and parameters) and variables in your code.
-    * *comment:* They didn't come in for nothing.
-1. > Immutability is king.
-    * *comment:* Know the [advantages](https://hackernoon.com/5-benefits-of-immutable-objects-worth-considering-for-your-next-project-f98e7e85b6ac).  
-1. > Always check clauses (e.g. in IFs) with the most accurate possible value.
-    * *comment:* Return types can change, but the clause should not. (core methods can also be changed.)
-1. > Avoid else and try early returns.
-    * *comment:* Read some [why's](https://szymonkrajewski.pl/why-should-you-return-early/).
-1. > Do not use arrays across class (or function) boundaries.
-    * *comment:* They are not typed.
-1. > String concatenation always with `sprintf`.
-    * *comment:* It is easier to extend and it prevents magic.
-1. > Use yoda comparison.
-    * *comment:* [Explanation](https://knowthecode.io/yoda-conditions-yoda-not-yoda). 
-    You can look at the same position for every clause and you prevent to assign a variable. 
-1. > Use `declare(strict_types=1);` at the top of every PHP script
-    * *comment:* [Explanation](https://www.brainbell.com/php/strict-type.html)  
-1. > Use `final` for your objects.
-    * *comment:* Our brain is not designed to understand inheritance (like exponential function).
-1. > The default visibility `private` applies to properties and functions.
-    * *comment:* You have to take care about every public function or property like a public api.
-1. > As long as annotations are not a language construct in PHP use them sparingly and only for inevitable process control
-   > or external packages where the maintainers know what they are doing.
-    * *comment:* Writing your own annotations is for pro's or use PHP8 attributes.
-1. > Do not use full namespaces in the code, `use` even if only `\` has to be specified
-    * *comment:* You can see how many external dependencies your class have. 
-1. > Traits should never use traits. I think you should prevent traits at all. 
-    * *comment:* It is nearly impossible to get out of this inheritance tree. And think at exponential functions.
-1. > Strings should be consts.
-    * Try to prevent strings from your code besides output and use constants instead. 
-    They are reusable and you reduce copy-paste-errors. 
-1. > Do not check in commented or unused code.
-    * *comment:* You have a version control system, use it.
-1. > No abbreviations in the code.
-    * *comment:* You use an IDE, use it.
-1. > Use dev-dependency-tools as phar files.
-    * *comment:* Your requirement-tree will be thankful, there are less conflicts and its faster.
-1. > Do not use a synchronous programming language like a asynchronous. 
-    * *comment:* I know there are good approaches, but both types are different ways of thinking. 
-    Maybe it is my fault, but IMO you can make one way very good, or two a little bit. 
+1. **What cannot be tested should not be programmed.**
+    - *Comment:* Start with [PHPUnit](https://phpunit.de).
+    - **Example:** Implementing unit tests for all public methods ensures that each function performs as expected.
+
+2. **Use type declarations for all properties, functions (return types and parameters), and variables.**
+    - *Comment:* They exist for a reason.
+    - **Reference:** [PHP Type Declarations](https://www.php.net/manual/en/language.types.declarations.php)
+
+3. **Immutability is king.**
+    - *Comment:* Know the [advantages](https://hackernoon.com/immutability).
+    - **Example:** Using immutable objects can prevent accidental changes to data.
+      ```php
+      final class ImmutableUser {
+          public function __construct(private readonly string $name) {
+          }
+ 
+          public function getName(): string {
+              return $this->name;
+          }
+      }
+      ```
+
+4. **Always check clauses with the most accurate possible value.**
+    - *Comment:* Return types can change, but the clause should not.
+    - **Example:** `if (true === $user->isActive())` is preferred over `if ($user->isActive())`.
+
+5. **Avoid else statements and use early returns.**
+    - *Comment:* [Reasons](https://szymonkrajewski.pl/why-early-return).
+    - **Example:**
+      ```php
+      function example($value) {
+          if (false === $value) {
+              return;
+          }
+          // Rest of the code
+      }
+      ```
+
+6. **Do not use arrays across class or function boundaries.**
+    - *Comment:* They are not typed.
+    - **Example:** Use value objects or DTOs instead of arrays.
+      ```php
+      final class UserDTO {
+          public function __construct(public readonly string $name, public readonly string $email) {
+          }
+      }
+ 
+      function createUser(UserDTO $userDTO) {
+          // Use $userDTO
+      }
+      ```
+
+7. **String concatenation should always use `sprintf`.**
+    - *Comment:* It is safer, easier to extend and it prevents magic. It is slower than normal concatenation.
+     - **Example:**
+      ```php
+      $name = "John";
+      $greeting = sprintf("Hello, %s!", $name);
+      ```
+
+8. **Use Yoda conditions.**
+    - *Comment:* [Explanation](https://knowthecode.io/yoda-conditions).
+    - **Example:** `if (42 === $answer)` prevents accidental assignment.
+      ```php
+      if (42 === $answer) {
+          // Do something
+      }
+      ```
+    - **Reference:** [To Yoda or Not to Yoda](https://knowthecode.io/yoda-conditions-yoda-not-yoda)
+
+9. **Use `declare(strict_types=1);` at the top of every PHP script.**
+    - *Comment:* [Explanation](https://brainbell.com/php/strict-type.html).
+    - **Example:** Ensures that all type declarations are strictly enforced.
+      ```php
+      declare(strict_types=1);
+ 
+      function add(int $a, int $b): int {
+          return $a + $b;
+      }
+      ```
+    - **Reference:** [Strict Types in PHP](https://www.php.net/manual/en/language.types.declarations.php#language.types.declarations.strict)
+
+10. **Use `final` for your objects.**
+    - *Comment:* Inheritance is complex to manage.
+    - **Example:**
+      ```php
+      final class User {
+          // Class implementation
+      }
+      ```
+    - **Reference:** [Final Keyword in PHP](https://www.php.net/manual/en/language.oop5.final.php)
+
+11. **Default visibility for properties and functions should be `private`.**
+    - *Comment:* Treat public functions/properties as public APIs.
+    - **Example:**
+      ```php
+      final class User {
+          public function __construct(private string $name) {}
+
+          public function getName(): string {
+              return $this->name;
+          }
+      }
+      ```
+    - **Reference:** [Visibility in PHP](https://www.php.net/manual/en/language.oop5.visibility.php)
+
+12. **Use annotations sparingly and only when necessary.**
+    - *Comment:* Prefer PHP8 attributes, return types and property types.
+    - **Example:**
+      ```php
+      #[PHPUnit\Framework\Attributes\DataProvider('provideNotAllowedKeys')]
+      public function testShowErrorWithNotAllowedKeys(string $key) 
+      ```
+    - **Reference:** [PHP8 Attributes](https://stitcher.io/blog/php-8-attributes)
+
+13. **Do not use full namespaces in the code; use `use` statements.**
+    - *Comment:* Highlights external dependencies.
+    - **Example:**
+      ```php
+      use Vendor\Package\Class;
+
+      $object = new Class();
+      ```
+    - **Reference:** [Namespaces in PHP](https://www.php.net/manual/en/language.namespaces.importing.php)
+
+14. **Traits should never use traits.**
+    - *Comment:* Avoid complex inheritance.
+    - **Example:** Avoid nested traits to reduce complexity.
+    - **Reference:** [Traits in PHP](https://www.php.net/manual/en/language.oop5.traits.php)
+
+15. **Strings should be constants.**
+    - *Comment:* Reduces errors and increases reusability.
+    - **Example:**
+      ```php
+      public const string STATUS_ACTIVE = 'active';
+      ```
+    - **Reference:** [Constants in PHP](https://www.php.net/manual/en/language.constants.php)
+
+16. **Do not check in commented or unused code.**
+    - *Comment:* Use version control.
+    - **Example:** Clean up code before committing.
+    - **Reference:** [Best Practices for Version Control](https://www.atlassian.com/git/tutorials/comparing-workflows)
+
+17. **Avoid abbreviations in the code.**
+    - *Comment:* Leverage IDE features.
+    - **Example:** Use `description` instead of `desc`.
+    - **Reference:** [Clean Code Practices](https://www.oreilly.com/library/view/clean-code/9780136083238/)
+
+18. **Use PHAR files for dev-dependency tools.**
+    - *Comment:* Reduces conflicts and speeds up requirements.
+    - **Example:** Use `phpunit.phar` for PHPUnit.
+    - **Reference:** [PHP Archive (PHAR)](https://www.php.net/manual/en/intro.phar.php)
+
+19. **Do not use asynchronous techniques in a synchronous language.**
+    - *Comment:* Different paradigms can lead to complexity.
+    - **Example:** Avoid mixing async JS techniques in PHP.
+
+#### Shortlist:
+
+* Use composer
+  * Use [composer scripts](https://getcomposer.org/doc/articles/scripts.md) for automation
+    * I have good experience with providing a static code analysis and tests with composer scripts in combination with bash scripts
+* Use [githooks](https://git-scm.com/docs/githooks) like [here](https://gist.github.com/freshp/977f4b5bc67bd2426450680adb172d54) to prevent commit cascade with fix tests, static code analysis, and code style
+* Use [openapi](https://www.openapis.org/) for API documentation
+* Adopt [dependency injection](https://www.php.net/manual/en/language.oop5.decon.php)
+* Use [value objects](https://wendelladriel.com/blog/understanding-value-objects-in-php) for domain logic
+* Do not use external class directly, use a wrapper
+* Use database migrations for example with [phinx](https://phinx.org/)
+* Use a logger like [monolog](https://github.com/Seldaek/monolog)
+* Use timestamp as exception code
+  * use the current timestamp as exception code while creating the exception
+  * it is better testable and the error log directly leads to the code
+* Use [design patterns](https://refactoring.guru/design-patterns/php) if you have their usecases
+* Use a factory for object creation
+* Use a repository for database access
+  * You can mock them in tests
+  * You know where to find the database access
+* Use [`filter_input`](https://www.php.net/manual/de/function.filter-input.php) to validate user input
+* Do not reinvent the wheel
+* Each repository should have a readme and the readme should be updated regularly
+* Use final interfaces to collect typed constants
+  * So you can bundle up contents like API date formats or other stuff.
+* Know the packages of [php-fig](https://github.com/php-fig)
+* Look through the packages of [phpleague](https://github.com/thephpleague)
+* If you deal with money look at [moneyphp](https://github.com/moneyphp/money)
+* Use [flysystem](https://github.com/thephpleague/flysystem) or [vfsStream](https://github.com/bovigo/vfsStream) to test file handling
+* Use [symfony intl](https://packagist.org/packages/symfony/intl) for internationalization
+* Use [symfony console](https://packagist.org/packages/symfony/console) for console applications
+* Most reason why I could not write tests is because I could not mock core functions but you can [example-test-php-core-methods](https://github.com/freshp/example-test-php-core-methods)
+* Working in teams is about working with API contracts. The smallest API contract are the public methods in a class.
 
 ## Learning the basics
 This is just a small snapshot I can recommend.
+(If you buy books please think about second hand books. The given links are more for information. 
+Think twice before you order it.)
 
 * Principles of object oriented design ([web](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod))
 * The clean coder ([book](https://www.amazon.de/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073) | [web](https://clean-code-developer.de/))
@@ -109,14 +259,20 @@ This is just a small snapshot I can recommend.
 * Principles of package design ([book](https://www.amazon.de/Principles-Package-Design-Creating-Components/dp/1484241185))
 * A philosophy of software design ([book](https://www.amazon.de/Philosophy-Software-Design-John-Ousterhout/dp/1732102201))
 * Pro git ([ebook](https://git-scm.com/book/de/v2))
+* The mythical man-month ([book](https://www.amazon.de/-/en/Frederick-Brooks/dp/0201835959))
 
 ## Blogs
 There are many more interesting blogs, but these selection cross up my way multiple times.
+It could be beneficial to look also through old articles.
 
 * https://blog.jetbrains.com/phpstorm/
 * https://blog.cleancoder.com/
 * https://matthiasnoback.nl/
 * https://ocramius.github.io/
+* https://www.sitepoint.com/php/
+* https://www.zend.com/blog
+* https://localheinz.com/articles/
+* https://stitcher.io/
 
 ## Tools
 * use package managers for your local requirements
@@ -137,7 +293,8 @@ There are many more interesting blogs, but these selection cross up my way multi
 ### Free online tools
 * if you need regex, than use [this page](https://regex101.com/)
 * you want to schedule a cronjob, than look at [this page](https://crontab.guru/)
-* you are not sure with your version constraint, than look at [this page](https://jubianchi.github.io/semver-check/#/)  
+* you are not sure with your version constraint, than look at [this page](https://jubianchi.github.io/semver-check/#/)
+* communication is the key, use [showcode](https://showcode.app/) for better presentations
 
 ## IDE
 * use an IDE for example [PHPStorm](https://www.jetbrains.com/phpstorm/) 
@@ -145,35 +302,25 @@ There are many more interesting blogs, but these selection cross up my way multi
     * use [inspections](https://www.jetbrains.com/help/phpstorm/code-inspection.html) 
     * use one of the default codestyles in PHPStorm for example [PSR-12](https://www.php-fig.org/psr/psr-12/)
     * use [xdebug](https://xdebug.org/) in PHPStorm ([documentation](https://www.jetbrains.com/help/phpstorm/configuring-xdebug.html))
-    * take a look at PHPStorm features like testing, database, deployment, version control, ...
+    * take a look at PHPStorm features like ai testing, testing, database, deployment, version control, ... [tutorials](https://blog.jetbrains.com/phpstorm/category/tutorials/)
 * use plugins of PHPStorm:
-    * PHP Inspections - EA [Extended](https://plugins.jetbrains.com/plugin/7622-php-inspections-ea-extended-) und [Ultimate](https://plugins.jetbrains.com/plugin/10215-php-inspections-ea-ultimate-)
-    * [composer](https://plugins.jetbrains.com/plugin/index?xmlId=org.psliwa.idea.composer)
+    * [github-copilot](https://plugins.jetbrains.com/plugin/17718-github-copilot)
     * [.env](https://plugins.jetbrains.com/plugin/9525--env-files-support)
     * [php annotations](https://plugins.jetbrains.com/plugin/7320-php-annotations)
-    * [auto format while save](https://plugins.jetbrains.com/plugin/7642-save-actions)
-    * [bash support](https://plugins.jetbrains.com/plugin/4230-bashsupport)
     * select a plugin for framework support like [symfony](https://plugins.jetbrains.com/plugin/7219-symfony-support)
 
 ## Important composer packages
 The list of packages is not complete, but you can start projects from this stack.
 
-* Composer package to handle [Security advisories](https://github.com/Roave/SecurityAdvisoriesBuilder). 
+* Composer package to handle [Security advisories](https://github.com/Roave/SecurityAdvisories). 
 * Do not commit secrets and use [.env's](https://github.com/vlucas/phpdotenv) instead.
 * The testing framework [PHPUnit](https://github.com/sebastianbergmann/phpunit).
    * If you reached nearly 100% of code coverage than you can go further with [infection](https://github.com/infection/infection).
 * Static code analyses with [PHPStan](https://github.com/phpstan/phpstan) or [Psalm](https://github.com/vimeo/psalm).
-* PHP Codesniffer with [PHPCS and PHPCBF](https://github.com/squizlabs/PHP_CodeSniffer).
-* Dependency injection of [symfony](https://symfony.com/doc/current/components/dependency_injection.html)
-* PHP library to generate [UUIDs](https://github.com/ramsey/uuid).
+* PHP Codesniffer with [PHPCS and PHPCBF](https://github.com/PHPCSStandards/PHP_CodeSniffer).
+* Dependency injection container [PHP-DI](https://github.com/PHP-DI/PHP-DI)
+* PHP library to generate [UUIDs](https://github.com/ramsey/uuid) or use [ULIDs](https://github.com/robinvdvleuten/php-ulid).
 * Simple composer PHAR file handling with [tooly](https://github.com/tommy-muehle/tooly-composer-script). 
-* Simple [Enum](https://github.com/freshp/php-enumeration) abstraction inspired by MySQL.
-
-### Global composer packages
-There are some packages you can install and use as global dependency.
-
-* Run Composer1 installs parallel with [prestissimo](https://github.com/hirak/prestissimo).
-   * Composer2 is very fast on its own. Uninstall this plugin and update the Composer itself.
 
 ## Code reviews
 Start making code reviews. If you dont know how? Read this [article](https://medium.com/palantir/code-review-best-practices-19e02780015f)
