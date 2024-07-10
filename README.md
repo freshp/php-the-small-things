@@ -114,9 +114,15 @@ Defects in these products lead to direct financial losses or a work blocker for 
       ```
 
 8. **Use Yoda conditions.**
-    - *Comment:* [Explanation](https://knowthecode.io/yoda-conditions).
-    - **Example:** `if (42 === $answer)` prevents accidental assignment.
+    - *Comment:* prevents accidental assignment and let your eye quicker find the info.
+    - **Example:** 
       ```php
+      if (
+          'no' === $answer
+          || 'yes' === $answer
+      ) {
+          // Do nothing
+      }
       if (42 === $answer) {
           // Do something
       }
@@ -327,7 +333,7 @@ Start making code reviews. If you dont know how? Read this [article](https://med
 
 ### Code review theses
 > You are not your Code!
-* code reviewer do not comment you, they comment your code
+* code reviewer do not comment on you, they comment your code
 > If you find code you do not understand, ask.
 * It is not the question if you should know, but when.
 
