@@ -344,3 +344,7 @@ For further diagrams or graphs you can use [draw.io](https://app.diagrams.net/).
 
 ## Estimation
 "Definition of 'estimate' according to Duden: (without exact measurement, based only on experience) to determine approximately" → We do not expect these to be exact and always correct, but they should get better.
+
+You have to learn how to approach it. Estimate before you start the task, then track the time and compare at the end what influenced you.
+
+Maybe start by using PERT result = (best case estimation + 4 *  normal estimation + worst case estimation) / 6 
