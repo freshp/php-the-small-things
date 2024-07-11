@@ -1,8 +1,6 @@
 # php the small things
 A summary of small things a php programmer can do to improve the code and the readability of code.
 
-*estimated reading time (without links): 15 minutes*
-
 There are so brilliant programming concepts and paradigms in the PHP community. I don't want to chew them again and again. 
 But I think everybody needs some easy small things we can improve in our everyday's work. 
 There are so many books, conferences, videos and so on, where you can learn great new or old architectures. 
