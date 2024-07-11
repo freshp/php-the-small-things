@@ -214,40 +214,6 @@ Defects in these products lead to direct financial losses or a work blocker for 
     - *Comment:* Different paradigms can lead to complexity.
     - **Example:** Avoid mixing async JS techniques in PHP.
 
-#### Shortlist:
-
-* Use composer
-  * Use [composer scripts](https://getcomposer.org/doc/articles/scripts.md) for automation
-    * I have good experience with providing a static code analysis and tests with composer scripts in combination with bash scripts
-* Use [githooks](https://git-scm.com/docs/githooks) like [here](https://gist.github.com/freshp/977f4b5bc67bd2426450680adb172d54) to prevent commit cascade with fix tests, static code analysis, and code style
-* Use [openapi](https://www.openapis.org/) for API documentation
-* Adopt [dependency injection](https://www.php.net/manual/en/language.oop5.decon.php)
-* Use [value objects](https://wendelladriel.com/blog/understanding-value-objects-in-php) for domain logic
-* Do not use external class directly, use a wrapper
-* Use database migrations for example with [phinx](https://phinx.org/)
-* Use a logger like [monolog](https://github.com/Seldaek/monolog)
-* Use timestamp as exception code
-  * use the current timestamp as exception code while creating the exception
-  * it is better testable and the error log directly leads to the code
-* Use [design patterns](https://refactoring.guru/design-patterns/php) if you have their usecases
-* Use a factory for object creation
-* Use a repository for database access
-  * You can mock them in tests
-  * You know where to find the database access
-* Use [`filter_input`](https://www.php.net/manual/de/function.filter-input.php) to validate user input
-* Do not reinvent the wheel
-* Each repository should have a readme and the readme should be updated regularly
-* Use final interfaces to collect typed constants
-  * So you can bundle up contents like API date formats or other stuff.
-* Know the packages of [php-fig](https://github.com/php-fig)
-* Look through the packages of [phpleague](https://github.com/thephpleague)
-* If you deal with money look at [moneyphp](https://github.com/moneyphp/money)
-* Use [flysystem](https://github.com/thephpleague/flysystem) or [vfsStream](https://github.com/bovigo/vfsStream) to test file handling
-* Use [symfony intl](https://packagist.org/packages/symfony/intl) for internationalization
-* Use [symfony console](https://packagist.org/packages/symfony/console) for console applications
-* Most reason why I could not write tests is because I could not mock core functions but you can [example-test-php-core-methods](https://github.com/freshp/example-test-php-core-methods)
-* Working in teams is about working with API contracts. The smallest API contract are the public methods in a class.
-
 ## Learning the basics
 This is just a small snapshot I can recommend.
 (If you buy books please think about second hand books. The given links are more for information. 
@@ -346,3 +312,37 @@ For further diagrams or graphs you can use [draw.io](https://app.diagrams.net/).
 You have to learn how to approach it. Estimate before you start the task, then track the time and compare at the end what influenced you.
 
 Maybe start by using PERT result = (best case estimation + 4 *  normal estimation + worst case estimation) / 6 
+
+## Uncategorized shortlist:
+
+* Use composer
+  * Use [composer scripts](https://getcomposer.org/doc/articles/scripts.md) for automation
+    * I have good experience with providing a static code analysis and tests with composer scripts in combination with bash scripts
+* Use [githooks](https://git-scm.com/docs/githooks) like [here](https://gist.github.com/freshp/977f4b5bc67bd2426450680adb172d54) to prevent commit cascade with fix tests, static code analysis, and code style
+* Use [openapi](https://www.openapis.org/) for API documentation
+* Adopt [dependency injection](https://www.php.net/manual/en/language.oop5.decon.php)
+* Use [value objects](https://wendelladriel.com/blog/understanding-value-objects-in-php) for domain logic
+* Do not use external class directly, use a wrapper
+* Use database migrations for example with [phinx](https://phinx.org/)
+* Use a logger like [monolog](https://github.com/Seldaek/monolog)
+* Use timestamp as exception code
+  * use the current timestamp as exception code while creating the exception
+  * it is better testable and the error log directly leads to the code
+* Use [design patterns](https://refactoring.guru/design-patterns/php) if you have their usecases
+* Use a factory for object creation
+* Use a repository for database access
+  * You can mock them in tests
+  * You know where to find the database access
+* Use [`filter_input`](https://www.php.net/manual/de/function.filter-input.php) to validate user input
+* Do not reinvent the wheel
+* Each repository should have a readme and the readme should be updated regularly
+* Use final interfaces to collect typed constants
+  * So you can bundle up contents like API date formats or other stuff.
+* Know the packages of [php-fig](https://github.com/php-fig)
+* Look through the packages of [phpleague](https://github.com/thephpleague)
+* If you deal with money look at [moneyphp](https://github.com/moneyphp/money)
+* Use [flysystem](https://github.com/thephpleague/flysystem) or [vfsStream](https://github.com/bovigo/vfsStream) to test file handling
+* Use [symfony intl](https://packagist.org/packages/symfony/intl) for internationalization
+* Use [symfony console](https://packagist.org/packages/symfony/console) for console applications
+* Most reason why I could not write tests is because I could not mock core functions but you can [example-test-php-core-methods](https://github.com/freshp/example-test-php-core-methods)
+* Working in teams is about working with API contracts. The smallest API contract are the public methods in a class.
