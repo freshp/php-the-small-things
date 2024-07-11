@@ -1,4 +1,4 @@
-# php the small things
+# PHP - the small things
 A summary of small things a php programmer can do to improve the code and the readability of code.
 
 There are so brilliant programming concepts and paradigms in the PHP community. I don't want to chew them again and again. 
