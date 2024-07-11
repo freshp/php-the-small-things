@@ -341,3 +341,6 @@ Start making code reviews. If you dont know how? Read this [article](https://med
 I only saw one approach, which seems to be suitable for software projects and this is [arc42](https://arc42.org/).
 
 For further diagrams or graphs you can use [draw.io](https://app.diagrams.net/).
+
+## Estimation
+"Definition of 'estimate' according to Duden: (without exact measurement, based only on experience) to determine approximately" → We do not expect these to be exact and always correct, but they should get better.
